@@ -26,15 +26,16 @@ class App extends React.Component {
 
       // top level information for each page
       home: {
-        title: 'Be Relentless',
-        subTitle: 'Projects that make a difference',
-        text: 'Checkout my projects below'
+        title: 'Always Exploring',
+        subTitle: 'Embracing challenges to work towards tomorrow\'s solutions',
+        text: 'To learn more click on my projects below:'
       },
       about: {
         title: 'About Me'
       },
       contact: {
-      title: 'Let\'s Talk'
+      title: 'Hello.',
+      text: 'What can I help you with?'
       }
     }
   }
@@ -63,7 +64,7 @@ class App extends React.Component {
 
           <Route path="/about" render={() => <AboutPage title={this.state.about.title}/>} />
 
-          <Route path="/contact" render={() => <ContactPage title={this.state.contact.title}/>} />
+          <Route path="/contact" render={() => <ContactPage title={this.state.contact.title} text={this.state.contact.text}/>} />
 
 {/* FOOTER - IMPORTED */}
           <Footer />
